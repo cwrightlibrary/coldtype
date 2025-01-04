@@ -1,7 +1,6 @@
 ############################################
 #                   Text                   #
 ############################################
-# https://coldtype.goodhertz.com/tutorials/text.html
 
 from coldtype import *
 
@@ -28,6 +27,18 @@ co = Font.ColdtypeObviously()
 # text. Let's change some settings
 
 
-@renderable((800, 150))
-def text2(r):
-    return StSt("CDELOPTY", co, 150, wdth=0.5).f(hsl(0.8, s=0.75)).align(r)
+# @renderable((800, 150))
+# def text2(r):
+#     return StSt("CDELOPTY", co, 150, wdth=0.5).f(hsl(0.8, s=0.75)).align(r)
+
+# We can also track out the letters and rotate them
+
+
+# @renderable((800, 150))
+# def text3(r):
+#     return (
+#         StSt("CDELOPTY", co, 150, wdth=0.5, rotate=10, tu=150)
+#         .f(hsl(0.9, s=0.75))
+#         .align(r)
+#     )
+
