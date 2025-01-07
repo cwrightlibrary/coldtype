@@ -20,13 +20,16 @@ dmsans = "src/fonts/DMSans-VariableFont_opsz,wght.ttf"
 
 # Center left to top left
 
-# @animation((800, 500), timeline=60, bg=hsl(0.5))
-# def animate_tpa2(f):
-#     y_pos = f.e("eeio", 1, rng=(0, f.a.r.h/3))
-#     return (StSt(tpa_text, dmsans, 50, wght=0)
-#             .align(f.a.r, th=0)
-#             .translate(-f.a.r.w/4, y_pos)
-#             .f(1))
+@animation((800, 500), timeline=60, bg=hsl(0.5))
+def animate_tpa2(f):
+    if f.i >= 30:
+        y_pos = f.a.r.h/3
+    else:
+        y_pos = f.e("eeio", 1, rng=(0, f.a.r.h/3))
+    return (StSt(tpa_text, dmsans, 50, wght=0)
+            .align(f.a.r, th=0)
+            .translate(-f.a.r.w/4, y_pos)
+            .f(1))
 
 # Second text left to center
 
@@ -47,25 +50,42 @@ dmsans = "src/fonts/DMSans-VariableFont_opsz,wght.ttf"
 
 # Third text left to center
 
-@animation((800, 500), timeline=60, bg=hsl(0.5))
-def animate_tpa4(f):
-    x_pos1 = -f.a.r.w/8
-    x_pos2 = f.e("eeio", 0, rng=(-f.a.r.w, -f.a.r.w/6.1))
-    y_pos1 = f.a.r.h/12
-    y_pos2 = 0
-    return P(
-        StSt(tpa_text, dmsans, 50, wght=0)
-        .align(f.a.r, th=0)
-        .translate(-f.a.r.w/4, f.a.r.h/3)
-        .f(1),
+# @animation((800, 500), timeline=60, bg=hsl(0.5))
+# def animate_tpa4(f):
+#     x_pos1 = -f.a.r.w/8
+#     x_pos2 = f.e("eeio", 0, rng=(-f.a.r.w, -f.a.r.w/6.1))
+#     y_pos1 = f.a.r.h/12
+#     y_pos2 = 0
+#     return P(
+#         StSt(tpa_text, dmsans, 50, wght=0)
+#         .align(f.a.r, th=0)
+#         .translate(-f.a.r.w/4, f.a.r.h/3)
+#         .f(1),
         
-        StSt(d_text1, dmsans, 30, wght=0.5)
-        .align(f.a.r, th=0)
-        .translate(x_pos1, y_pos1)
-        .f(1),
+#         StSt(d_text1, dmsans, 30, wght=0.5)
+#         .align(f.a.r, th=0)
+#         .translate(x_pos1, y_pos1)
+#         .f(1),
         
-        StSt(d_text2, dmsans, 30, wght=0.5)
-        .align(f.a.r, th=0)
-        .translate(x_pos2, y_pos2)
-        .f(1)
-        )
+#         StSt(d_text2, dmsans, 30, wght=0.5)
+#         .align(f.a.r, th=0)
+#         .translate(x_pos2, y_pos2)
+#         .f(1)
+#         )
+
+# @animation((1920, 1280), timeline=60, bg=hsl(0.5))
+# def align_test(f, depth=0):
+#     return P(
+#         StSt(d_text1, dmsans, 100, wght=0.5)
+#         .align(f.a.r, "mnx")
+#         .f(1),
+        
+#         StSt(d_text2, dmsans, 100, wght=0.5)
+#         .translate(f.e())
+#         .align(f.a.r, "mnx")
+#         .f(1),
+        
+#         StSt(str(f.i), dmsans, 100, wght=1)
+#         .align(f.a.r)
+#         .f(0)
+#     )
